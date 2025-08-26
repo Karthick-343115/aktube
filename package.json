@@ -1,0 +1,35 @@
+{
+  "name": "aktube",
+  "version": "1.0.0",
+  "description": "A full-featured YouTube clone with video upload and streaming capabilities",
+  "main": "youtube-clone-server.js",
+  "scripts": {
+    "start": "node youtube-clone-server.js",
+    "dev": "nodemon youtube-clone-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aktube",
+    "youtube",
+    "video",
+    "streaming",
+    "upload",
+    "express",
+    "nodejs"
+  ],
+  "author": "AKtube",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
+
