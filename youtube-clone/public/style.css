@@ -1,0 +1,106 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; background: #f9f9f9; }
+
+.header { 
+    background: white; 
+    padding: 12px 24px; 
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header__content { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__brand { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #ff0000; 
+}
+
+.header__search { 
+    display: flex; 
+    flex: 1; 
+    max-width: 600px; 
+    margin: 0 40px; 
+}
+
+.header__search input { 
+    flex: 1; 
+    padding: 8px 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px 0 0 4px; 
+}
+
+.header__search button { 
+    padding: 8px 16px; 
+    background: #f8f8f8; 
+    border: 1px solid #ccc; 
+    border-left: none; 
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer; 
+}
+
+.btn-upload { 
+    background: #ff0000; 
+    color: white; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.main { margin-top: 80px; padding: 24px; }
+
+.videos-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-card { 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+
+.video-card:hover { transform: translateY(-2px); }
+
+.video-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.video-details { padding: 16px; }
+
+.video-title { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+
+.video-uploader { color: #666; font-size: 14px; }
+
+.player-view { max-width: 1200px; margin: 0 auto; }
+
+#videoPlayer { 
+    width: 100%; 
+    max-height: 500px; 
+    background: black; 
+    border-radius: 8px; 
+}
+
+@media (max-width: 768px) {
+    .videos-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 16px; 
+    }
+    
+    .header__search { margin: 0 20px; }
+}
